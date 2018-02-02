@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>// {{tamil+english+maths+science+social}}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>note_list</id>
+        <internal>false</internal>
+        <link/>
+        <name>Note List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-01-31 09:23:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4bc968704f441700cee253418110c7d6</sys_id>
+        <sys_mod_count>50</sys_mod_count>
+        <sys_name>Note List</sys_name>
+        <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
+        <sys_update_name>sp_widget_4bc968704f441700cee253418110c7d6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-01 10:51:52</sys_updated_on>
+        <template><![CDATA[<div>
+${Tamil:}<input type='number'ng-model='tamil'><span ng-if='tamil>=45'> 
+  Result <input type='text' value='Pass' /></span>
+  <span ng-if='tamil<45'> Result <input type='text' value='fail'/></span><br><br>
+  
+${English:}<input type='number'ng-model='english'><span ng-if='english>=45'> 
+  Result <input type='text' value='Pass' /></span>
+  <span ng-if='english<45'> Result <input type='text' value='fail'/></span><br><br>
+  
+${Maths:}<input type='number'ng-model='maths'><span ng-if='maths>=45'> 
+  Result <input type='text' value='Pass' /></span>
+  <span ng-if='maths<45'> Result <input type='text' value='fail'/></span><br><br>
+  
+${Science:}<input type='number'ng-model='science'><span ng-if='science>=45'> 
+  Result <input type='text' value='Pass' /></span>
+  <span ng-if='science<45'> Result <input type='text' value='fail'/></span><br><br>
+  
+${Social:}<input type='number'ng-model='social'><span ng-if='social>=45'> 
+  Result <input type='text' value='Pass' /></span>
+  <span ng-if='social<45'> Result <input type='text' value='fail'/></span><br><br>
+  
+${Total:}<input type='number'ng-model=tamil+english+maths+science+social><br><br>
+   
+${FinalResult:}<span ng-if='tamil>45 && english>45 && maths>45 && science>45 && social>45'><input type='text' value='Pass'/></span>
+  <span ng-if='tamil<45 || english<45 || maths<45 || science<45 || social<45'><input type='text' value='Fail'/></span>
+</div>
+  <br>
+<br>
+
+ 
+ 
+ 
+]]></template>
+    </sp_widget>
+</record_update>
